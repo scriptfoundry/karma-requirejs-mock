@@ -1,0 +1,18 @@
+{
+  "name": "TestRunner",
+  "version": "0.0.1",
+  "description": "Generic test runner for TSN tests",
+  "main": "main.js",
+  "dependencies": {
+    "karma": "~0.8.5",
+	"mocha": "~1.10.0",
+	"chai": "~1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./karma.start"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
