@@ -12,7 +12,7 @@ I wrote this after having tremendous difficulty finding a setup that allowed for
 
 The number one problem I kept running into is that AMD mocking requires creating new `context`s. Even when running on `localhost`, this is asynchronous and can cause test suites to return before all the tests have run. So far, the only acceptable solution (especially with respect to point 4), was [Karma](http://karma-runner.github.io/0.8/index.html), using [Mocha](http://visionmedia.github.io/mocha/) as the testing framework. Mocking is done using some extremely simple code found in a [StackOverflow answer](http://stackoverflow.com/questions/11439540/how-can-i-mock-dependencies-for-unit-testing-in-requirejs/11695463#11695463).
 
-I've added [Chai](http://chaijs.com/) for easy BDD matching. I've not added [Sinon/](http://sinonjs.org/), though I may soon (or if someone requests it.)
+I've added [Chai](http://chaijs.com/) for easy BDD matching. I've not added [Sinon](http://sinonjs.org/), though I may soon (or if someone requests it.)
 
 ## Requirements
 
@@ -20,7 +20,9 @@ You will need [Node and NPM](http://nodejs.org/) installed.
 
 ## Recommended setup
 
-So, actually I don't have any recommendations. I could make this into another [Grunt](http://gruntjs.com/) scaffolding ecosystem, but these tend to have a short shelf-life and get abandoned pretty quickly. Plus, you may want to add this to your project after you've already added a lot of working code. You might want to just move the entire test folder to your project's `scripts` folder and modify the `karma.conf.js` and, if necessary, `main.js`. I wouldn't add this as a Git submodule. 
+You might want to just move the entire test folder to your project's `scripts` folder and modify the `karma.conf.js` and, if necessary, `main.js`. I wouldn't add this as a Git submodule. You don't want all your tests to start breaking just because you updated the test working directory!
+
+Yeah, I could make this into another [Grunt](http://gruntjs.com/) scaffolding ecosystem, but these tend to have a short shelf-life and get abandoned pretty quickly, and there's nothing more frustrating than finding something that should work but doesn't because Grunt has changed or something nasty like that. Plus, you may want to add this to your project after you've already added a lot of working code.  
 
 The way I would set up your code though might be something like this:
 
@@ -49,7 +51,7 @@ Use `r.js` to compile your application into the `dist` folder. Be sure to keep a
 
 Once the project is installed, go to the `test` directory and run `npm install`. It should fetch all the dependencies. 
 
-Karma.js will be installed as a local module, so if you don't have it installed globally already, you will need to run it explicitly from the node\_modules folder. There is a shell script you can use for this on Linux/Mac. Just follow these steps:
+Karma will be installed as a local module, so if you don't have it installed globally already, you will need to run it explicitly from the node\_modules folder. There is a shell script you can use for this on Linux/Mac. Just follow these steps:
 
  1. Open a terminal
  2. Navigate to the `test` folder
