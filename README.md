@@ -32,16 +32,16 @@ The way I would set up your code though might be something like this:
             - Baz.js # module called 'Bar/Baz'
           - Foo.js 
         - main.js # The entry point for your application
-        + test
+        + test/
           - karma.conf.js
           - karma.start
           - main.js # The entry point for testing your library
           + node_modules
-          + specs
+          + specs/
             - BarBazSpec.js
             - FooSpec.js
-          + vendor # Any third-party modules that will only be used in the tests
-        + vendor # Your application's third-party modules
+          + vendor/ # Any third-party modules that will only be used in the tests
+        + vendor/ # Your application's third-party modules
 
 Use `r.js` to compile your application into the `dist` folder. Be sure to keep all `test` code out of your application's `main.js`.
 
