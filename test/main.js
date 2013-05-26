@@ -6,8 +6,8 @@ requirejs.config({
 	baseUrl: 'base/lib/',
 	paths: {
 		'chai': '../test/node_modules/chai/chai',
-		'underscore': '../vendor/underscore/underscore',
-		'mocker': '../vendor/mocker/mocker'
+		'underscore': '../test/vendor/underscore/underscore',
+		'mocker': '../test/vendor/mocker/mocker'
 	},
 	shim: {
 		'chai': {
@@ -22,4 +22,3 @@ requirejs.config({
 requirejs(['chai'], function () {
 	/* This method can be used for any setup work you need to do. */
 });
-

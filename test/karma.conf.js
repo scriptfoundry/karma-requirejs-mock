@@ -13,8 +13,8 @@ files = [
   REQUIRE,
   REQUIRE_ADAPTER,
   'test/main.js',
-  {pattern: 'vendor/mocker/mocker.js', included: false},
-  {pattern: 'vendor/underscore/underscore.js', included: false},
+  {pattern: 'test/vendor/mocker/mocker.js', included: false},
+  {pattern: 'test/vendor/underscore/underscore.js', included: false},
   {pattern: 'test/node_modules/chai/chai.js', included: false},
   {pattern: 'test/specs/**/*Spec.js', included: false},
   {pattern: 'lib/**/*.js',  included: false}

@@ -6,7 +6,8 @@
   "dependencies": {
     "karma": "~0.8.5",
 	"mocha": "~1.10.0",
-	"chai": "~1.6.0"
+	"chai": "~1.6.0",
+	"requirejs": "~2.1.6"
   },
   "devDependencies": {},
   "scripts": {
