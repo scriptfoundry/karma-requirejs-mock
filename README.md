@@ -26,22 +26,22 @@ The way I would set up your code though might be something like this:
 
     root/
       + scripts/
-        + dist/ # For minified production code
-        + lib/ # For your require.js module code
-          + Bar/ # a namespaced submodule
-            - Baz.js # module called 'Bar/Baz'
-          - Foo.js 
-        - main.js # The entry point for your application
+        + dist/             # For minified production code
+        + lib/              # For your require.js module code
+          + Bar/            # a namespaced submodule
+            - Baz.js        # module called 'Bar/Baz'
+          - Foo.js          # module called 'Foo'
+        - main.js           # the entry point for your application
         + test/
           - karma.conf.js
           - karma.start
-          - main.js # The entry point for testing your library
-          + node_modules
+          - main.js         # The entry point for testing your library
+          + node_modules/
           + specs/
-            - BarBazSpec.js
-            - FooSpec.js
-          + vendor/ # Any third-party modules that will only be used in the tests
-        + vendor/ # Your application's third-party modules
+            - BarBazSpec.js # spec file for Bar/Baz
+            - FooSpec.js    # spec for Foo
+          + vendor/         # Any third-party modules that will only be used in the tests
+        + vendor/           # Third-party modules for your application
 
 Use `r.js` to compile your application into the `dist` folder. Be sure to keep all `test` code out of your application's `main.js`.
 
