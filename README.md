@@ -1,7 +1,7 @@
 karma-requirejs-mock
 ====================
 
-A Karma.js test framework setup with Require.js and a simple mocking system for isolating modules from their dependencies. 
+This is a Karma.js test framework setup with Require.js and a simple mocking system for isolating modules from their dependencies. 
 
 I wrote this after having tremendous difficulty finding a setup that allowed for...
 
@@ -10,9 +10,9 @@ I wrote this after having tremendous difficulty finding a setup that allowed for
  3. allowing complete isolation of modules, when needed, via mock dependencies,
  4. but without adding complexity or excessive boilerplate. 
 
-The number one problem I kept running into is that AMD mocking requires creating new `context`s. Even when running on `localhost`, this is asynchronous and can cause test suites to return before all the tests have run. So far, the only acceptable solution (especially with respect to point 4), was [Karma](http://karma-runner.github.io/0.8/index.html), using [Mocha](http://visionmedia.github.io/mocha/) as the testing framework.
+The number one problem I kept running into is that AMD mocking requires creating new `context`s. Even when running on `localhost`, this is asynchronous and can cause test suites to return before all the tests have run. So far, the only acceptable solution (especially with respect to point 4), was [Karma](http://karma-runner.github.io/0.8/index.html), using [Mocha](http://visionmedia.github.io/mocha/) as the testing framework. Mocking is done using some extremely simple code found in a [StackOverflow answer](http://stackoverflow.com/questions/11439540/how-can-i-mock-dependencies-for-unit-testing-in-requirejs/11695463#11695463).
 
-I've added [Chai](http://chaijs.com/) for easy BDD matching. I've not added [http://sinonjs.org/](http://sinonjs.org/), though I may soon (or if someone requests it.)
+I've added [Chai](http://chaijs.com/) for easy BDD matching. I've not added [Sinon/](http://sinonjs.org/), though I may soon (or if someone requests it.)
 
 ## Requirements
 
